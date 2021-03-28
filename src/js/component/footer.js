@@ -2,9 +2,8 @@ import React, { Component } from "react";
 
 export const Footer = () => (
 	<footer className="footer mt-auto py-3 text-center">
-		<p>
-			Made with <i className="fa fa-heart text-danger" /> by{" "}
-			<a href="http://www.4geeksacademy.com">4Geeks Academy</a>
+		<p style={{ color: "#dba90d", fontSize: "20px", marginTop: "50px", fontWeight: "bolder" }}>
+			Made with The Force by Celeste Alpizar
 		</p>
 	</footer>
 );

@@ -5,6 +5,8 @@ import ScrollToTop from "./component/scrollToTop";
 import { Home } from "./views/home";
 import { Demo } from "./views/demo";
 import { Single } from "./views/single";
+import { Character } from "./views/character";
+import { Planet } from "./views/planet";
 import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
@@ -30,12 +32,18 @@ const Layout = () => {
 						<Route exact path="/characters">
 							<Characters />
 						</Route>
+						<Route exact path="/characters/:id">
+							<Character />
+						</Route>
 						<Route exact path="/planets">
 							<Planets />
 						</Route>
-						<Route exact path="/single/:theid">
-							<Single />
+						<Route exact path="/planets/:id">
+							<Planets />
 						</Route>
+						{/* <Route exact path="/single/:theid"> este es el ejemplo de una ruta que recibe ruta + algo mas (en este caso un id)
+							<Single />                          el id viene del view single
+						</Route> */}
 						<Route>
 							<h1>Not found!</h1>
 						</Route>
