@@ -21,7 +21,7 @@ export const Characters = () => {
 			<div className="card-columns">
 				{store.characters.map((character, index) => {
 					return (
-						<div className="card text-white" key={index}>
+						<div className="card text-white" heigth="380px" key={index}>
 							<img src={characterImg} className="card-img-top" alt="..." />
 							<div className="card-body">
 								<h5 className="card-title mb-2">{character.name}</h5>
@@ -30,8 +30,12 @@ export const Characters = () => {
 									{" " + character.gender}
 								</p>
 								<p className="card-text m-0">
-									Homeworld:
-									{" " + character.homeworld}
+									Height:
+									{" " + character.height + "cm"}
+								</p>
+								<p className="card-text m-0">
+									Birth Year:
+									{" " + character.birth_year}
 								</p>
 								<Link to={"/characters/" + index}>
 									<button className="btn btn-outline-warning mt-2">Learn more!</button>
@@ -45,6 +49,11 @@ export const Characters = () => {
 						</div>
 					);
 				})}
+			</div>
+			<div>
+				<Link to="/">
+					<button className="btn btn-outline-warning m-2 text-center">Back home</button>
+				</Link>
 			</div>
 		</div>
 	);

@@ -31,6 +31,7 @@ export const Planets = () => {
 								</p>
 								<p className="card-text m-0">
 									Terrain:
+									<br />
 									{" " + planets.terrain}
 								</p>
 								<Link to={"/planets/" + index}>
@@ -45,6 +46,11 @@ export const Planets = () => {
 						</div>
 					);
 				})}
+			</div>
+			<div>
+				<Link to="/">
+					<button className="btn btn-outline-warning m-2 text-center">Back home</button>
+				</Link>
 			</div>
 		</div>
 	);
