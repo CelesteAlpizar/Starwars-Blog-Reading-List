@@ -39,7 +39,7 @@ const Layout = () => {
 							<Planets />
 						</Route>
 						<Route exact path="/planets/:id">
-							<Planets />
+							<Planet />
 						</Route>
 						{/* <Route exact path="/single/:theid"> este es el ejemplo de una ruta que recibe ruta + algo mas (en este caso un id)
 							<Single />                          el id viene del view single

@@ -37,11 +37,12 @@ export const Planets = () => {
 								<Link to={"/planets/" + index}>
 									<button className="btn btn-outline-warning mt-2">Learn more!</button>
 								</Link>
-								<Link to="/">
-									<button className="btn btn-outline-warning mt-2 " style={{ float: "right" }}>
-										<i className="fas fa-star" />
-									</button>
-								</Link>
+								<button
+									className="btn btn-outline-warning mt-2 "
+									style={{ float: "right" }}
+									onClick={() => actions.getFavoritePlanets(index)}>
+									<i className="fas fa-star" />
+								</button>
 							</div>
 						</div>
 					);

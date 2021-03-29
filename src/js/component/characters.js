@@ -40,11 +40,12 @@ export const Characters = () => {
 								<Link to={"/characters/" + index}>
 									<button className="btn btn-outline-warning mt-2">Learn more!</button>
 								</Link>
-								<Link to="/">
-									<button className="btn btn-outline-warning mt-2 " style={{ float: "right" }}>
-										<i className="fas fa-star" />
-									</button>
-								</Link>
+								<button
+									className="btn btn-outline-warning mt-2 "
+									style={{ float: "right" }}
+									onClick={() => actions.getFavoriteCharacters(index)}>
+									<i className="fas fa-star" />
+								</button>
 							</div>
 						</div>
 					);

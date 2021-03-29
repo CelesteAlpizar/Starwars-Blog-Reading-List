@@ -39,6 +39,16 @@ const getState = ({ getStore, getActions, setStore }) => {
 						setStore({ planets: data.results });
 					})
 					.catch(error => console.log(error, "error"));
+			},
+			getFavoriteCharacters: index => {
+				const store = getStore();
+				store.favorites.push(store.characters[index].name);
+				console.log(store.favorites);
+			},
+			getFavoritePlanets: index => {
+				const store = getStore();
+				store.favorites.push(store.planets[index].name);
+				console.log(store.favorites);
 			}
 		}
 	};
