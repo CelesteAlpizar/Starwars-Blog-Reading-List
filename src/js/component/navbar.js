@@ -40,17 +40,17 @@ export const Navbar = () => {
 						data-toggle="dropdown"
 						aria-haspopup="true"
 						aria-expanded="false">
-						Favorites
+						{store.favorites.length} Favorites
 					</button>
 					<div className="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-						{/* {store.favorites.map((fav, index) => {
+						{store.favorites.map((fav, index) => {
 							return (
 								<span className="dropdown-item" key={index}>
 									{fav}
+									<i className="fas fa-trash" onClick={() => actions.handleDelete(index)} />
 								</span>
 							);
-						})} */}
-						<span className="dropdown-item">gegsgdg</span>
+						})}
 					</div>
 				</div>
 			</div>

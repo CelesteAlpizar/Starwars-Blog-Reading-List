@@ -42,13 +42,24 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 			getFavoriteCharacters: index => {
 				const store = getStore();
-				store.favorites.push(store.characters[index].name);
-				console.log(store.favorites);
+				let handleRepeat = store.favorites.includes(store.characters[index].name);
+				if (handleRepeat === false) {
+					store.favorites.push(store.characters[index].name);
+				}
+				setStore(store);
 			},
 			getFavoritePlanets: index => {
 				const store = getStore();
-				store.favorites.push(store.planets[index].name);
-				console.log(store.favorites);
+				let handleRepeat = store.favorites.includes(store.planets[index].name);
+				if (handleRepeat === false) {
+					store.favorites.push(store.planets[index].name);
+				}
+				setStore(store);
+			},
+			handleDelete: index => {
+				const store = getStore();
+				store.favorites.splice(index, 1);
+				setStore(store);
 			}
 		}
 	};
